@@ -17,7 +17,7 @@ namespace Tamagotchi.Tests
         public void SetGetName_SetsGetsName_String()
         {
             Pets newPet = new Pets();
-
+            newPet.SetName("Sam");
             Assert.AreEqual("Sam", newPet.GetName());
 
         }

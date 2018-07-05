@@ -1,16 +1,24 @@
-﻿<h1>Pet Details</h1>
-<h2>Name: </h2>
-<h2>Age: </h2>
-<h2>Hunger: </h2>
-<h2>Fatigue: </h2>
-<h2>Happiness: </h2>
+﻿@{
+  Layout = "_Layout";
+}
 
-<form action="/pets/pet-{id}" method="post">
-  <button id="feed-pet" type="submit" name="feed-pet">Feed</button>
+<h1>Pet Details</h1>
+<ul>
+    <li>Name: @Model.GetName()</li>
+    <li>Age: @Model.GetAge()</li>
+    <li>Hunger: @Model.GetHunger()</li>
+    <li>Fatigue: @Model.GetFatigue() </li>
+    <li>Happiness: @Model.GetHappiness() </li>
+</ul>
+
+<form action="/pets" method="post">
+    <button id="feed-pet" type="submit" name="feed-pet">Feed</button>
+ </form>
+
+ <form action="/pets" method="post">
+    <button type="submit" name="button">Sleep</button>
 </form>
-<form action="/pets/pet-{id}" method="post">
-  <button type="submit" name="button">Sleep</button>
-</form>
-<form action="/pets/pet-{id}" method="post">
-  <button type="submit" name="button">Play</button>
+
+<form action="/pets" method="post">
+    <button type="submit" name="button">Play</button>
 </form>

@@ -1,28 +1,22 @@
-﻿<h1>All Tamagotchis</h1>
+﻿@{
+  Layout = "_Layout";
+}
+
+<h1>All Tamagotchis</h1>
 
 <h3>Your new Tamagotchi has been created!
 <ul>
     @foreach (var pet in Model)
     {
        <h1>Pet Details</h1>
-        <h2>Name:@pet.GetName() </h2>
-        <h2>Age: @pet.GetAge()</h2>
-        <h2>Hunger: @pet.GetHunger()</h2>
-        <h2>Fatigue: @pet.GetFatigue() </h2>
-        <h2>Happiness: @pet.GetHappiness() </h2>
+        <li>Name: <a href="/pets/@pet.GetId()">@pet.GetName()</a></li>
+        <li>Age: @pet.GetAge()</li>
+        <li>Hunger: @pet.GetHunger()</li>
+        <li>Fatigue: @pet.GetFatigue() </li>
+        <li>Happiness: @pet.GetHappiness() </li>
      }
- <!--       <form action="/pets" method="post">
-          <button id="feed-pet" type="submit" name="feed-pet">Feed</button>
-        </form>
-        <form action="/pets" method="post">
-          <button type="submit" name="button">Sleep</button>
-        </form>
-        <form action="/pets" method="post">
-          <button type="submit" name="button">Play</button>
-        </form>-->
-
-    
 </ul>
+       
 <form action="/pets" method="post">
   <button type="submit" name="button">Pass Time</button>
 </form>

@@ -22,13 +22,15 @@ namespace Tamagotchi.Controllers
             newPet.SetName(petName);
 
             return View(Pets.GetAll());
+            //return new EmptyResult();
         }
 
-        //[HttpGet("/pets/{id}")]
-        //public ActionResult SinglePet(int id)
-        //{
-        //    Pets newPet = Pets.Find(id);
-        //    return View(newPet);
-        //}
+        [HttpGet("/pets/{id}")]
+        public ActionResult SinglePet(int id)
+        {
+            Pets newPet = Pets.Find(id);
+            return View(newPet);
+            //return new EmptyResult();
+        }
     }
 }

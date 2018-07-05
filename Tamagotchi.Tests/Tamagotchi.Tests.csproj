@@ -15,4 +15,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Tamagotchi\Tamagotchi.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ModelTests\" />
+    <Folder Include="ControllerTests\" />
+  </ItemGroup>
 </Project>
