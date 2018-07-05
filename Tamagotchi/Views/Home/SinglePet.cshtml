@@ -11,14 +11,14 @@
     <li>Happiness: @Model.GetHappiness() </li>
 </ul>
 
-<form action="/pets" method="post">
+<form action="/pets/@Model.GetId()/feed-pet" method="post">
     <button id="feed-pet" type="submit" name="feed-pet">Feed</button>
  </form>
 
- <form action="/pets" method="post">
+ <form action="/pets/@Model.GetId()/sleep-pet" method="post">
     <button type="submit" name="button">Sleep</button>
 </form>
 
-<form action="/pets" method="post">
+<form action="/pets/@Model.GetId()/play-pet" method="post">
     <button type="submit" name="button">Play</button>
 </form>

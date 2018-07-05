@@ -62,5 +62,15 @@ namespace Tamagotchi.Tests
             var result = singlePetView.ViewData.Model;
             Assert.IsInstanceOfType(result, typeof(Pets));
         }
+
+        [TestMethod]
+        public void SinglePet_PetHungerIncreases_True()
+        {
+            Pets petOne = new Pets();
+            List<Pets> newPetList = new List<Pets>() { petOne };
+            ViewResult singlePetView = new HomeController().SinglePet(1) as ViewResult;
+            var result = singlePetView.ViewData.Model;
+            Assert.IsInstanceOfType(result, typeof(Pets));
+        }
     }
 }

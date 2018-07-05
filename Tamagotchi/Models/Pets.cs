@@ -20,9 +20,9 @@ namespace Tamagotchi.Models
             _pets.Add(this);
             _id = _pets.Count;
             _age = 0;
-            _hunger = 5;
-            _happiness = 5;
-            _fatigue = 5;
+            _hunger = 50;
+            _happiness = 50;
+            _fatigue = 50;
             _alive = true;
         }
 
@@ -95,9 +95,33 @@ namespace Tamagotchi.Models
             _pets.Clear();
         }
 
-        public void FeedPet()
+        public void Feed()
         {
-            
+            _hunger += 10;
+            _fatigue -= 5;
+            _happiness -= 5;
+        }
+
+        public void Sleep()
+        {
+            _fatigue += 10;
+            _happiness -= 5;
+            _hunger -= 5;
+        }
+
+        public void Play()
+        {
+            _happiness += 10;
+            _fatigue -= 5;
+            _hunger -= 5;
+        }
+
+        public void Time()
+        {
+            _age += 1;
+            _happiness -= 20;
+            _fatigue -= 20;
+            _hunger -= 20;
         }
     }
 }
