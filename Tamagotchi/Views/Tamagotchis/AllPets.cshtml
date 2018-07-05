@@ -1,0 +1,11 @@
+﻿<ul>
+    @foreach (var pet in Model)
+    {
+        <a href="pets/pet-{id}">@Model.GetName()</a>
+        <li>@tamagotchi.GetAll()</li>
+    }
+</ul>
+
+<form action="/pets" method="post">
+  <button type="submit" name="button">Pass Time</button>
+</form>
